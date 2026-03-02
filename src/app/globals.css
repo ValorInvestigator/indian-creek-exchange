@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-forest-50: #f0f7f1;
+  --color-forest-100: #d9eddb;
+  --color-forest-200: #b5dbb9;
+  --color-forest-300: #84c18b;
+  --color-forest-400: #56a35f;
+  --color-forest-500: #3a8544;
+  --color-forest-600: #2a6a33;
+  --color-forest-700: #1a4d2e;
+  --color-forest-800: #1a3f27;
+  --color-forest-900: #163421;
+
+  --color-amber-50: #fff9eb;
+  --color-amber-100: #ffefc6;
+  --color-amber-200: #ffdc88;
+  --color-amber-300: #ffc94a;
+  --color-amber-400: #ffb420;
+  --color-amber-500: #f59407;
+  --color-amber-600: #d96f02;
+  --color-amber-700: #b44d06;
+  --color-amber-800: #923b0c;
+  --color-amber-900: #78310d;
+
+  --color-wood-50: #faf6f1;
+  --color-wood-100: #f0e8db;
+  --color-wood-200: #e0cfb5;
+  --color-wood-300: #cdaf89;
+  --color-wood-400: #bd9365;
+  --color-wood-500: #b17f4f;
+  --color-wood-600: #9c6841;
+  --color-wood-700: #825138;
+  --color-wood-800: #6b4332;
+  --color-wood-900: #58382b;
+
+  --color-charcoal: #2d2d2d;
+  --color-offwhite: #f7f5f0;
+
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #2d2d2d;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
