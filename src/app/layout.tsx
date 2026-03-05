@@ -192,6 +192,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }}
           />
         )}
+        {/* Google Ads conversion tracking tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17995024889" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17995024889');`,
+          }}
+        />
       </head>
       <body className="antialiased font-[family-name:var(--font-body)] text-charcoal bg-offwhite min-h-screen flex flex-col">
         {GTM_ID && (
