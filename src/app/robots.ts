@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://indian-creek-exchange.vercel.app/sitemap.xml",
+    sitemap: "https://indiancreekexchange.com/sitemap.xml",
   };
 }

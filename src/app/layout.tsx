@@ -17,7 +17,7 @@ const oswald = Oswald({
   display: "swap",
 });
 
-const siteUrl = "https://indian-creek-exchange.vercel.app";
+const siteUrl = "https://indiancreekexchange.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
