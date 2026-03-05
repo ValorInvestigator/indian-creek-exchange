@@ -255,8 +255,8 @@ export default function Home() {
             <motion.div variants={fadeInUp} className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full">
               <div className="relative h-64 shrink-0">
                 <Image
-                  src="/images/yard/ICE-3.jpg"
-                  alt="Cedar fencing materials"
+                  src="/images/products/chicken-coop.jpg"
+                  alt="Cedar chicken coop built with Indian Creek Exchange lumber"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -294,8 +294,8 @@ export default function Home() {
             <motion.div variants={fadeInUp} className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-xl transition-shadow flex flex-col h-full">
               <div className="relative h-64 shrink-0">
                 <Image
-                  src="/images/yard/ICE-7.jpg"
-                  alt="Cedar siding and beams"
+                  src="/images/products/bluestain-pine-1.jpg"
+                  alt="Western Red Cedar Blue Stain Pine flooring and wall cladding"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
