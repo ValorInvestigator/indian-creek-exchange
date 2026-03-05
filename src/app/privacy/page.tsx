@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
                 <p className="text-sm text-gray-500 mb-8">Last Updated: {new Date().toLocaleDateString()}</p>
 
                 <p className="mb-4">
-                    At Indian Creek Exchange, we respect your privacy and are committed to protecting it through our compliance with this policy. This policy describes the types of information we may collect from you or that you may provide when you visit the website indiancreekexchange.com and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+                    At Indian Creek Exchange, we respect your privacy and are committed to protecting it through our compliance with this policy. This policy describes the types of information we may collect from you or that you may provide when you visit the website indian-creek-exchange.com and our practices for collecting, using, maintaining, protecting, and disclosing that information.
                 </p>
 
                 <h2 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-charcoal uppercase tracking-wide mt-8 mb-4">

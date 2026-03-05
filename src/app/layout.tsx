@@ -17,7 +17,7 @@ const oswald = Oswald({
   display: "swap",
 });
 
-const siteUrl = "https://indiancreekexchange.com";
+const siteUrl = "https://www.indian-creek-exchange.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

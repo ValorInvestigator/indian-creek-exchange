@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     const { name, company, phone, email, projectType, species, quantity, delivery, timeline, notes } = body;
 
     const { error } = await resend.emails.send({
-      from: "Indian Creek Exchange <specialty@indiancreekexchange.com>",
+      from: "Indian Creek Exchange <specialty@indian-creek-exchange.com>",
       to: ["mike@unityforest.com", "jason@unityforest.com"],
       replyTo: email || undefined,
       subject: `Specialty/Bulk Order — ${company || name} — ${projectType}`,
@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1a3a2a; padding: 24px; border-radius: 8px 8px 0 0;">
             <h1 style="color: #f59e0b; margin: 0; font-size: 22px; text-transform: uppercase; letter-spacing: 2px;">Specialty / Bulk Order Inquiry</h1>
-            <p style="color: #a7c4b5; margin: 8px 0 0; font-size: 14px;">Indian Creek Exchange — indiancreekexchange.com</p>
+            <p style="color: #a7c4b5; margin: 8px 0 0; font-size: 14px;">Indian Creek Exchange -- indian-creek-exchange.com</p>
           </div>
           <div style="background: #ffffff; padding: 32px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
             <table style="width: 100%; border-collapse: collapse;">
