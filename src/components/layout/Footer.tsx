@@ -75,9 +75,10 @@ export default function Footer() {
             {[
               "Elgin, OR",
               "La Grande, OR",
-              "Enterprise, OR",
-              "The Wallowas",
+              "Enterprise & The Wallowas",
+              "Baker City, OR",
               "Tri-Cities, WA",
+              "Walla Walla, WA",
               "Eastern Oregon & Beyond",
             ].map((loc) => (
               <li key={loc}>{loc}</li>
