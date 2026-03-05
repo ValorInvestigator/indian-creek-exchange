@@ -53,9 +53,9 @@ const products = [
       { name: "5/4x12 Pecky Cedar WP11 Siding", description: "Extra-wide dramatic pecky cedar siding" },
     ],
     gallery: [
+      "/images/products/wrc1.jpg",
       "/images/products/bevel-siding.jpg",
       "/images/products/logcabin-siding.jpg",
-      "/images/products/shiplap-siding.jpg",
       "/images/products/board-batten.jpg",
     ],
     description: "Multiple cedar siding profiles: Bevel, WP4, WP11. Available in premium clears, knotty, or rustic pecky grades.",
@@ -71,9 +71,9 @@ const products = [
       { name: "2x8 Redwood Decking", description: "Wide redwood decking, S4S (Premium & Merch grades)" },
     ],
     gallery: [
+      "/images/products/decking1.jpg",
       "/images/products/cedar-decking.jpg",
       "/images/products/deck-boards.jpg",
-      "/images/products/outdoor-furniture.jpg",
       "/images/products/adirondack-chair.jpg",
     ],
     description: "From budget-friendly Cedar to premium Redwood. Surfaced, dried, and ready to install.",
@@ -91,10 +91,10 @@ const products = [
       { name: "3x8 Fencing Rails", description: "Extra-heavy horizontal fence rails (Standard)" },
     ],
     gallery: [
+      "/images/products/fence1.jpg",
       "/images/yard/ICE-3.jpg",
       "/images/products/fence-posts.jpg",
       "/images/products/lattice-panel.jpg",
-      "/images/products/ranch-fence-cabin.jpg",
     ],
     description: "Complete fencing systems: thick pickets, horizontal rails, and heavy posts in standard and premium grades.",
   },
