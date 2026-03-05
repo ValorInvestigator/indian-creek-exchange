@@ -289,8 +289,8 @@ function FenceEstimator() {
       const postCaps = posts;
 
       const items = [
-        { name: `4x4 WC Cedar Posts (${Math.ceil(height * 1.5 + 2)}ft for ${height}ft fence)`, quantity: posts, unit: "posts", category: "Lumber" },
-        { name: "2x4 IC Cedar Rails", quantity: rails, unit: "rails", category: "Lumber" },
+        { name: `4x4 Cedar Posts (${height + 2}ft for ${height}ft fence)`, quantity: posts, unit: "posts", category: "Lumber" },
+        { name: "3x4 or 2x4 IC Cedar Rails", quantity: rails, unit: "rails", category: "Lumber" },
         { name: `5/4x6 or 1x6 IC Pickets (${height}ft)`, quantity: pickets, unit: "pickets", category: "Lumber" },
         { name: "Rail-to-Post Brackets (fence brackets)", quantity: railBrackets, unit: "brackets", category: "Hardware" },
         { name: "Post Caps", quantity: postCaps, unit: "caps", category: "Hardware" },
@@ -307,8 +307,8 @@ function FenceEstimator() {
       const concrete = Math.ceil(posts * 1.5);
 
       const items = [
-        { name: `6x6 Cedar Posts (${Math.ceil(height + 3)}ft)`, quantity: posts, unit: "posts", category: "Lumber" },
-        { name: "2x4 or 2x6 Cedar Rails (10ft)", quantity: rails, unit: "rails", category: "Lumber" },
+        { name: `6x6 Cedar Posts (${height + 2}ft)`, quantity: posts, unit: "posts", category: "Lumber" },
+        { name: "3x4 or 2x6 Cedar Rails (10ft)", quantity: rails, unit: "rails", category: "Lumber" },
         { name: "Rail-to-Post Brackets / Saddle Ties", quantity: rails * 2, unit: "brackets", category: "Hardware" },
         { name: "Structural Lag Screws", quantity: rails * 4, unit: "screws", category: "Hardware" },
         { name: "Fast-Setting Concrete (50lb bags)", quantity: concrete, unit: "bags", category: "Concrete" },
@@ -409,8 +409,8 @@ function FenceEstimator() {
             <p className="text-forest-800 text-sm">
               <strong>Pro tip:</strong> Always use rail-to-post brackets (sometimes
               called fence ties or saddle brackets) to attach rails to posts. They
-              hold the 2x4 rails securely against the post and prevent sagging over
-              time &mdash; much stronger than toe-nailing.
+              hold 3x4 or 2x4 rails securely against the post and prevent sagging
+              over time &mdash; much stronger than toe-nailing.
             </p>
           </div>
 

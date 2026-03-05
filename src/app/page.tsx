@@ -113,8 +113,6 @@ export default function Home() {
   }, []);
 
   // Stats counters
-  const { count: yearsCount, nodeRef: yearsRef } = useCountUp(15, 2.5);
-  const { count: feetCount, nodeRef: feetRef } = useCountUp(250000, 3);
   const { count: productsCount, nodeRef: productsRef } = useCountUp(90, 2);
 
   return (
@@ -205,27 +203,27 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Counting Stats (By the Numbers) */}
+      {/* Value Props */}
       <section className="bg-white py-16 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
-            <div className="pt-6 md:pt-0" ref={yearsRef}>
-              <div className="text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-charcoal mb-2">
-                {yearsCount}<span className="text-amber-500">+</span>
+            <div className="pt-6 md:pt-0">
+              <div className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-heading)] text-amber-500 mb-2 uppercase tracking-wide">
+                Mill-Direct
               </div>
-              <p className="text-gray-500 uppercase tracking-widest text-sm font-semibold">Years Supplying Oregon</p>
-            </div>
-            <div className="pt-6 md:pt-0" ref={feetRef}>
-              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-charcoal mb-2">
-                {feetCount.toLocaleString()}<span className="text-amber-500">+</span>
-              </div>
-              <p className="text-gray-500 uppercase tracking-widest text-[10px] sm:text-sm font-semibold">Board Feet Milled Mthly</p>
+              <p className="text-gray-500 uppercase tracking-widest text-sm font-semibold">No Middlemen. No Markups.</p>
             </div>
             <div className="pt-6 md:pt-0" ref={productsRef}>
               <div className="text-5xl lg:text-6xl font-bold font-[family-name:var(--font-heading)] text-charcoal mb-2">
                 {productsCount}<span className="text-amber-500">+</span>
               </div>
               <p className="text-gray-500 uppercase tracking-widest text-sm font-semibold">Cedar Products In-Stock</p>
+            </div>
+            <div className="pt-6 md:pt-0">
+              <div className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-heading)] text-amber-500 mb-2 uppercase tracking-wide">
+                Bulk Pricing
+              </div>
+              <p className="text-gray-500 uppercase tracking-widest text-sm font-semibold">Special Rates for Contractors</p>
             </div>
           </div>
         </div>
@@ -270,12 +268,11 @@ export default function Home() {
                 <p className="text-charcoal leading-relaxed mb-4 flex-grow">
                   Fencing, chicken coops, raised garden beds, benches, decks
                   &mdash; whatever you&apos;re building on your property.
-                  Quality cedar at prices that make the big-box stores look
-                  ridiculous.
+                  Mill-direct pricing means you get quality cedar without the
+                  retail chain markup.
                 </p>
                 <p className="text-forest-700 font-semibold text-sm mb-4">
-                  Why pay $400 for a post when you can get it for $35? We own
-                  our supply chain &mdash; you get the savings.
+                  Special pricing on bulk orders for contractors and large projects.
                 </p>
                 <div>
                   <MagneticButton>
@@ -444,10 +441,9 @@ export default function Home() {
                 no wholesalers, no retail markups stacked on top of each other.
               </motion.p>
               <motion.p variants={fadeInUp} className="text-charcoal leading-relaxed mb-4">
-                A fence post that costs $400 at a big-box store? We sell it for
-                $35. That&apos;s not a sale price. That&apos;s our price,
-                because we cut out every middleman between the lumber and your
-                property.
+                Mill-direct pricing means what you pay reflects actual lumber
+                value &mdash; not a retail chain&apos;s margin. Special pricing
+                available on bulk orders for contractors and large projects.
               </motion.p>
               <motion.p variants={fadeInUp} className="text-charcoal leading-relaxed mb-6">
                 Indian Creek Exchange is the closest cedar supplier to the
@@ -506,10 +502,10 @@ export default function Home() {
               Request a Quote
             </Link>
             <a
-              href="tel:+15416250807"
+              href="tel:+15418051190"
               className="border-2 border-white text-white hover:bg-white hover:text-wood-800 px-8 py-3.5 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase transition-all duration-200 hover:shadow-lg hover:-translate-y-1 active:translate-y-0 block w-full sm:w-auto"
             >
-              Call (541) 625-0807
+              Call (541) 805-1190
             </a>
           </motion.div>
         </motion.div>

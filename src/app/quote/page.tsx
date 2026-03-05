@@ -54,12 +54,12 @@ export default function QuotePage() {
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Thanks! We&apos;ll get back to you within 24 hours. Because we source direct,
-                we can usually beat big-box store prices significantly.
+                mill-direct pricing means no middleman markup. Ask about bulk contractor rates.
               </p>
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-100 text-sm text-gray-500">
                 <p>If you need an immediate answer or want to talk through your project right now, give us a call.</p>
-                <a href="tel:+15416250807" className="inline-block mt-3 font-bold text-forest-700 text-lg hover:text-amber-500 transition-colors">
-                  (541) 625-0807
+                <a href="tel:+15418051190" className="inline-block mt-3 font-bold text-forest-700 text-lg hover:text-amber-500 transition-colors">
+                  (541) 805-1190
                 </a>
               </div>
               <motion.button

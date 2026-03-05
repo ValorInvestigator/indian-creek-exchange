@@ -36,8 +36,8 @@ export default function Header() {
       {/* Top bar */}
       <div className="bg-forest-900 text-white text-xs sm:text-sm py-2 px-4 relative z-10 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
         <span className="mb-1 sm:mb-0">810 Inkwood St, Elgin, OR 97827</span>
-        <a href="tel:+15416250807" className="hover:text-amber-400 font-bold transition-colors">
-          (541) 625-0807
+        <a href="tel:+15418051190" className="hover:text-amber-400 font-bold transition-colors">
+          (541) 805-1190
         </a>
       </div>
 

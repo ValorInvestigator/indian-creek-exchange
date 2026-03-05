@@ -100,10 +100,10 @@ export default function Footer() {
             <p>Elgin, OR 97827</p>
             <p className="pt-1">
               <a
-                href="tel:+15416250807"
+                href="tel:+15418051190"
                 className="text-white hover:text-amber-400 font-semibold transition-colors"
               >
-                (541) 625-0807
+                (541) 805-1190
               </a>
             </p>
           </address>

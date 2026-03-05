@@ -46,11 +46,10 @@ export default function AboutPage() {
               No distributors. No wholesalers. No retail chain taking their cut.
             </p>
             <p className="text-charcoal leading-relaxed mb-4">
-              The result? A 6&times;8 cedar timber beam that runs $400 or more
-              at a big-box store sells here for under $50. A 4&times;4 post
-              that&apos;s $50 at a retail yard? About $11. Not because
-              it&apos;s lower quality — because every middleman between the
-              mill and your property has been removed.
+              The result is mill-direct pricing &mdash; what you pay reflects
+              actual lumber value, not a retail chain&apos;s markup. Special
+              pricing is available on bulk orders for contractors and large
+              projects.
             </p>
           </div>
 

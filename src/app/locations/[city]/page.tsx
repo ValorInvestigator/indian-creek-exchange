@@ -95,7 +95,7 @@ export default function LocationPage({ params }: { params: { city: string } }) {
                         {getLocalContext()}
                     </p>
                     <p className="text-lg text-gray-600 leading-relaxed mt-4">
-                        Indian Creek Exchange cuts out the middleman. By sourcing and milling our own Western Red and Incense Cedar alongside our partners at Unity Lumber, we provide <strong>{location.name}</strong> builders with superior quality lumber at highly competitive prices.
+                        Indian Creek Exchange cuts out the middleman. Mill-direct cedar means we provide <strong>{location.name}</strong> builders with superior quality lumber at highly competitive prices.
                     </p>
                 </div>
             </section>

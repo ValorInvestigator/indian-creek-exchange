@@ -42,10 +42,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-charcoal mb-1">Phone</h3>
                 <a
-                  href="tel:+15416250807"
+                  href="tel:+15418051190"
                   className="text-forest-700 font-semibold text-lg hover:text-forest-800 transition-colors"
                 >
-                  (541) 625-0807
+                  (541) 805-1190
                 </a>
               </div>
 
@@ -61,8 +61,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-charcoal mb-1">Partners</h3>
                 <p className="text-gray-600">
-                  Kennon Lumber &mdash; operating on site<br />
-                  Unity Lumber &mdash; Yuba City, CA (our supplier)
+                  Kennon Lumber &mdash; operating on site
                 </p>
               </div>
             </div>
