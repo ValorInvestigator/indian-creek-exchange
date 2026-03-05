@@ -3,7 +3,6 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Preloader from '@/components/ui/Preloader';
 
 const inter = Inter({
   variable: "--font-body",
@@ -154,7 +153,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased font-[family-name:var(--font-body)] text-charcoal bg-offwhite min-h-screen flex flex-col">
-        <Preloader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

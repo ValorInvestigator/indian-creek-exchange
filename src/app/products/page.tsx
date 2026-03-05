@@ -255,7 +255,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="mt-4 text-forest-200 text-lg md:text-xl max-w-2xl leading-relaxed">
-            90+ cedar and lumber products on site, mill-direct pricing.
+            50+ cedar and lumber products on site, mill-direct pricing.
             From rough-sawn timbers to precision-milled siding profiles
             &mdash; if it&apos;s cedar, we stock it.
           </p>

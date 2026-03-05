@@ -49,7 +49,7 @@ const productCategories = [
 const trustSignals = [
   { label: "Mill-Direct Pricing", detail: "From our own supplier" },
   { label: "Elgin, Oregon", detail: "Serving the Wallowas & beyond" },
-  { label: "90+ Products", detail: "Cedar, redwood & more in stock" },
+  { label: "50+ Products", detail: "Cedar, redwood & more in stock" },
   { label: "No Middlemen", detail: "You save, every board" },
 ];
 
@@ -113,7 +113,7 @@ export default function Home() {
   }, []);
 
   // Stats counters
-  const { count: productsCount, nodeRef: productsRef } = useCountUp(90, 2);
+  const { count: productsCount, nodeRef: productsRef } = useCountUp(50, 2);
 
   return (
     <>
