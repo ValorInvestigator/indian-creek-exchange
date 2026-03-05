@@ -17,19 +17,19 @@ const productCategories = [
   {
     name: "Cedar Fencing",
     description: "Posts, rails, pickets, and lattice for ranch and privacy fencing",
-    image: "/images/yard/ICE-3.jpg",
+    image: "/images/products/fence1.jpg",
     href: "/products#fencing",
   },
   {
     name: "Cedar Decking",
     description: "Incense Cedar and Redwood decking in multiple profiles",
-    image: "/images/yard/ICE-4.jpg",
+    image: "/images/products/decking1.jpg",
     href: "/products#decking",
   },
   {
     name: "Siding & Cladding",
     description: "Bevel siding, board-and-batten, shiplap, log cabin, T&G",
-    image: "/images/yard/ICE-7.jpg",
+    image: "/images/products/wrc1.jpg",
     href: "/products#siding",
   },
   {
