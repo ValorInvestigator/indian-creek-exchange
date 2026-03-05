@@ -185,10 +185,9 @@ export default function SpecialtyOrdersPage() {
               >
                 <div className="w-20 h-20 bg-forest-50 text-forest-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl border border-forest-100">&#10003;</div>
                 <h2 className="font-[family-name:var(--font-heading)] text-3xl font-bold text-charcoal uppercase tracking-wide mb-4">Order Inquiry Sent</h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6 max-w-lg mx-auto">
-                  Our wholesale team will be in contact with you directly. For urgent requests, call us now.
+                <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto">
+                  Our wholesale team will be in contact with you directly.
                 </p>
-                <a href="tel:+15418051190" className="inline-block font-bold text-forest-700 text-xl hover:text-amber-500 transition-colors">(541) 805-1190</a>
               </motion.div>
             ) : (
               <motion.div key="form" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
@@ -311,10 +310,7 @@ export default function SpecialtyOrdersPage() {
                     {!sending && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>}
                   </motion.button>
 
-                  <p className="text-center text-xs text-gray-400">
-                    Or call us directly: <a href="tel:+15418051190" className="font-bold text-forest-700 hover:text-amber-500 transition-colors">(541) 805-1190</a>
-                  </p>
-                </form>
+                  </form>
               </motion.div>
             )}
           </AnimatePresence>
