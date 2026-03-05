@@ -16,13 +16,27 @@ const projectTypes = [
 
 export default function QuotePage() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Simulate submission delay
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 600);
+    setSending(true);
+    setError("");
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      projectType: (form.elements.namedItem("projectType") as HTMLSelectElement).value,
+      description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
+      delivery: (form.elements.namedItem("delivery") as HTMLInputElement).value,
+    };
+    try {
+      const res = await fetch("/api/quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      if (res.ok) { setSubmitted(true); } else { setError("Something went wrong. Call us at (541) 805-1190."); }
+    } catch { setError("Something went wrong. Call us at (541) 805-1190."); }
+    finally { setSending(false); }
   }
 
   return (
@@ -194,15 +208,17 @@ export default function QuotePage() {
                     />
                   </div>
 
+                  {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
                   <div className="pt-4">
                     <motion.button
                       whileHover={{ scale: 1.02, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
                       whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-lg font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-lg transition-colors flex justify-center items-center gap-2"
+                      disabled={sending}
+                      className="w-full bg-amber-500 hover:bg-amber-600 disabled:opacity-60 text-white py-4 rounded-lg font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-lg transition-colors flex justify-center items-center gap-2"
                     >
-                      Send Quote Request
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                      {sending ? "Sending..." : "Send Quote Request"}
+                      {!sending && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>}
                     </motion.button>
                   </div>
                 </form>

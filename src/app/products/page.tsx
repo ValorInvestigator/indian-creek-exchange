@@ -102,6 +102,7 @@ const products = [
     id: "specialty",
     name: "Pine Pattern & Specialty",
     items: [
+      { name: "Western Red Blue Stain Pine", description: "Blue stain pine with natural mineral streaking -- stunning as flooring, paneling, or accent walls. Pairs beautifully with cedar." },
       { name: "4\" Pine Pattern", description: "Available in WP4-2COM, WP11-2COM, WP4-CLR, and WP11-CLR profiles" },
       { name: "6\" Pine Pattern", description: "Available in WP4-2COM, WP11-2COM, and WP11-CLR profiles" },
       { name: "8\" Pine Pattern", description: "WP11-2COM profile pine pattern" },
@@ -111,12 +112,12 @@ const products = [
       { name: "4\" Pine Moulding", description: "Pine edge detail and trim moulding" },
     ],
     gallery: [
+      "/images/products/bluestain-pine-2.jpg",
+      "/images/products/bluestain-pine-1.jpg",
       "/images/products/bluestain-pine.jpg",
-      "/images/products/mahogany-floor.jpg",
-      "/images/yard/ICE-4.jpg",
       "/images/products/cedar-knot-detail.jpg",
     ],
-    description: "Wide selection of Pine Pattern boards including WP4, WP11, Ceiling profiles, and Board & Batten.",
+    description: "Blue Stain Pine and Pine Pattern boards including WP4, WP11, Ceiling profiles, and Board & Batten. The blue stain pine flooring and paneling is especially popular -- see the gallery.",
   },
   {
     id: "other",

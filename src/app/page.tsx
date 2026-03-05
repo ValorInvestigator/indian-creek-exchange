@@ -157,8 +157,11 @@ export default function Home() {
             </motion.div>
             <motion.p style={{ y: y2 }} variants={fadeInUp} className="mt-4 text-lg sm:text-xl text-white/90 leading-relaxed max-w-lg">
               Eastern Oregon&apos;s source for quality cedar. Fencing, decking,
-              siding, beams &mdash; and full cabin building supplies. No
+              siding, beams &mdash; mill-direct to your job site. No
               middlemen, no markups.
+            </motion.p>
+            <motion.p variants={fadeInUp} className="mt-3 text-base text-amber-300 font-semibold max-w-lg">
+              Subdivision builders &amp; large contractors: there is no order too large &mdash; all cedar available at volume.
             </motion.p>
             <motion.div variants={fadeInUp} className="mt-10 flex flex-col sm:flex-row gap-4">
               <MagneticButton>
@@ -172,10 +175,10 @@ export default function Home() {
               </MagneticButton>
               <MagneticButton>
                 <Link
-                  href="/products"
-                  className="border-2 border-white/80 text-white hover:bg-white hover:text-forest-800 px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-colors block w-full sm:w-auto"
+                  href="/specialty-orders"
+                  className="border-2 border-amber-400/80 text-amber-300 hover:bg-amber-500 hover:text-white hover:border-amber-500 px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-colors block w-full sm:w-auto"
                 >
-                  View Products
+                  Bulk &amp; Specialty Orders
                 </Link>
               </MagneticButton>
             </motion.div>

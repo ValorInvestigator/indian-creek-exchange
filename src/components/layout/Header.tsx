@@ -9,6 +9,7 @@ import MagneticButton from "@/components/ui/MagneticButton";
 
 const navigation = [
   { name: "Products", href: "/products" },
+  { name: "Bulk & Specialty", href: "/specialty-orders" },
   { name: "Estimators", href: "/estimators" },
   { name: "Resources", href: "/resources" },
   { name: "Gallery", href: "/gallery" },
