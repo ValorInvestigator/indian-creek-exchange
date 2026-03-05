@@ -6,7 +6,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, phone, email, projectType, description, delivery } = body;
+    const { name, phone, email, projectType, description, delivery, utm_source, utm_medium, utm_campaign, utm_term, utm_content, gclid } = body;
+    const hasTracking = utm_source || utm_medium || utm_campaign || gclid;
 
     const { error } = await resend.emails.send({
       from: "Indian Creek Exchange <quotes@indiancreekexchange.com>",
@@ -27,6 +28,16 @@ export async function POST(req: Request) {
               <tr><td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-weight: bold; color: #374151;">Project Type</td><td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827;">${projectType}</td></tr>
               <tr><td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-weight: bold; color: #374151;">Delivery</td><td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827;">${delivery || "Not provided"}</td></tr>
             </table>
+            ${hasTracking ? `
+            <div style="margin-top: 20px; padding: 12px 16px; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 6px; font-size: 12px; color: #0369a1;">
+              <strong>Ad Attribution:</strong><br/>
+              ${utm_source ? `Source: ${utm_source}<br/>` : ""}
+              ${utm_medium ? `Medium: ${utm_medium}<br/>` : ""}
+              ${utm_campaign ? `Campaign: ${utm_campaign}<br/>` : ""}
+              ${utm_term ? `Keyword: ${utm_term}<br/>` : ""}
+              ${utm_content ? `Ad: ${utm_content}<br/>` : ""}
+              ${gclid ? `Google Click ID: ${gclid}` : ""}
+            </div>` : ""}
             <div style="margin-top: 24px;">
               <p style="font-weight: bold; color: #374151; margin-bottom: 8px;">Project Details:</p>
               <p style="color: #111827; background: #f9fafb; padding: 16px; border-radius: 6px; border: 1px solid #e5e7eb; line-height: 1.6; white-space: pre-wrap;">${description}</p>

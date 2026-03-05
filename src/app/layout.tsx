@@ -101,7 +101,7 @@ export default function RootLayout({
     telephone: "+1-541-805-1190",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "185 N Inkwood St",
+      streetAddress: "810 Inkwood St",
       addressLocality: "Elgin",
       addressRegion: "OR",
       postalCode: "97827",
@@ -115,15 +115,15 @@ export default function RootLayout({
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
         closes: "17:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Friday",
-        opens: "08:00",
-        closes: "15:30",
+        dayOfWeek: "Saturday",
+        opens: "09:00",
+        closes: "14:00",
       },
     ],
     image: `${siteUrl}/images/yard/aerial-yard.jpg`,
@@ -151,9 +151,35 @@ export default function RootLayout({
     },
   };
 
+  // Replace GTM-XXXXXXX with your real Google Tag Manager container ID
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {GTM_ID && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+            }}
+          />
+        )}
+      </head>
       <body className="antialiased font-[family-name:var(--font-body)] text-charcoal bg-offwhite min-h-screen flex flex-col">
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

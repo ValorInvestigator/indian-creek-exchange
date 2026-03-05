@@ -5,7 +5,7 @@ import * as motion from "framer-motion/client";
 import { useScroll, useTransform, useInView, Variants } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import MagneticButton from "@/components/ui/MagneticButton";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
 
 const productCategories = [
   {
@@ -36,7 +36,7 @@ const productCategories = [
     name: "Framing & Structural",
     description: "Douglas Fir dimensional framing and T1-11 siding",
     image: "/images/yard/ICE-8.jpg",
-    href: "/products#framing",
+    href: "/products#lumber",
   },
   {
     name: "Pine Pattern & Specialty",
@@ -163,24 +163,29 @@ export default function Home() {
             <motion.p variants={fadeInUp} className="mt-3 text-base text-amber-300 font-semibold max-w-lg">
               Subdivision builders &amp; large contractors: there is no order too large &mdash; all cedar available at volume.
             </motion.p>
-            <motion.div variants={fadeInUp} className="mt-10 flex flex-col sm:flex-row gap-4">
-              <MagneticButton>
-                <Link
-                  href="/quote"
-                  className="group relative overflow-hidden bg-amber-500 text-white px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-all hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] block w-full sm:w-auto"
-                >
-                  <span className="relative z-10">Request a Quote</span>
-                  <div className="absolute inset-0 h-full w-full bg-amber-400 transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
-                </Link>
-              </MagneticButton>
-              <MagneticButton>
-                <Link
-                  href="/specialty-orders"
-                  className="border-2 border-amber-400/80 text-amber-300 hover:bg-amber-500 hover:text-white hover:border-amber-500 px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-colors block w-full sm:w-auto"
-                >
-                  Bulk &amp; Specialty Orders
-                </Link>
-              </MagneticButton>
+            <motion.div variants={fadeInUp} className="mt-6">
+              <a
+                href="tel:+15418051190"
+                className="inline-flex items-center gap-2 text-white text-xl sm:text-2xl font-bold font-[family-name:var(--font-heading)] tracking-wide hover:text-amber-400 transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+                (541) 805-1190
+              </a>
+            </motion.div>
+            <motion.div variants={fadeInUp} className="mt-6 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/quote"
+                className="group relative overflow-hidden bg-amber-500 text-white px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-all hover:shadow-[0_0_20px_rgba(251,191,36,0.4)] block w-full sm:w-auto"
+              >
+                <span className="relative z-10">Request a Quote</span>
+                <div className="absolute inset-0 h-full w-full bg-amber-400 transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></div>
+              </Link>
+              <Link
+                href="/specialty-orders"
+                className="border-2 border-amber-400/80 text-amber-300 hover:bg-amber-500 hover:text-white hover:border-amber-500 px-8 py-4 rounded font-[family-name:var(--font-heading)] font-bold tracking-wider uppercase text-center transition-colors block w-full sm:w-auto"
+              >
+                Bulk &amp; Specialty Orders
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -278,14 +283,12 @@ export default function Home() {
                   Special pricing on bulk orders for contractors and large projects.
                 </p>
                 <div>
-                  <MagneticButton>
-                    <Link
-                      href="/quote"
-                      className="inline-block bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded font-bold text-sm uppercase tracking-wider transition-colors"
-                    >
-                      Get Your Quote
-                    </Link>
-                  </MagneticButton>
+                  <Link
+                    href="/quote"
+                    className="inline-block bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded font-bold text-sm uppercase tracking-wider transition-colors"
+                  >
+                    Get Your Quote
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -317,14 +320,12 @@ export default function Home() {
                   supplier to the Wallowa Mountains is right here.
                 </p>
                 <div>
-                  <MagneticButton>
-                    <Link
-                      href="/quote"
-                      className="inline-block bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded font-bold text-sm uppercase tracking-wider transition-colors"
-                    >
-                      Plan Your Build
-                    </Link>
-                  </MagneticButton>
+                  <Link
+                    href="/quote"
+                    className="inline-block bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded font-bold text-sm uppercase tracking-wider transition-colors"
+                  >
+                    Plan Your Build
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -513,6 +514,9 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* Sticky mobile CTA bar */}
+      <StickyMobileCTA />
     </>
   );
 }

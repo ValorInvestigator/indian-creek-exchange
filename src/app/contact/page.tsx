@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Contact & Directions",
   description:
-    "Visit Indian Creek Exchange at 185 N Inkwood St, Elgin, OR 97827. Get directions, hours, and phone number for Eastern Oregon's cedar lumber source.",
+    "Visit Indian Creek Exchange at 810 Inkwood St, Elgin, OR 97827. Get directions, hours, and phone number for Eastern Oregon's cedar lumber source.",
   alternates: { canonical: "/contact" },
 };
 

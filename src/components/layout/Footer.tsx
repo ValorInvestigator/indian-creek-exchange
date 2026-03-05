@@ -5,7 +5,7 @@ const productLinks = [
   { name: "Cedar Fencing", href: "/products#fencing" },
   { name: "Cedar Decking", href: "/products#decking" },
   { name: "Siding & Cladding", href: "/products#siding" },
-  { name: "Framing & Structural", href: "/products#framing" },
+  { name: "Framing & Structural", href: "/products#lumber" },
 ];
 
 const resourceLinks = [
@@ -102,6 +102,16 @@ export default function Footer() {
               </a>
             </p>
           </address>
+          <div className="mt-4">
+            <h4 className="font-[family-name:var(--font-heading)] text-sm font-bold tracking-wider uppercase mb-2 text-amber-400">
+              Hours
+            </h4>
+            <div className="text-forest-300 text-sm space-y-0.5">
+              <p>Mon&ndash;Fri: 8:00 AM &ndash; 5:00 PM</p>
+              <p>Saturday: 9:00 AM &ndash; 2:00 PM</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
           <Link
             href="/quote"
             className="inline-block mt-4 bg-amber-500 hover:bg-amber-600 text-white px-5 py-3 sm:py-2 rounded text-sm font-bold tracking-wider uppercase transition-colors w-full sm:w-auto text-center"

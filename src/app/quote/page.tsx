@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 const projectTypes = [
@@ -15,9 +16,29 @@ const projectTypes = [
 ];
 
 export default function QuotePage() {
+  return (
+    <Suspense fallback={null}>
+      <QuoteForm />
+    </Suspense>
+  );
+}
+
+function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  const searchParams = useSearchParams();
+
+  // Capture UTM params and gclid from URL for ad attribution
+  const [utmData, setUtmData] = useState<Record<string, string>>({});
+  useEffect(() => {
+    const params: Record<string, string> = {};
+    ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"].forEach((key) => {
+      const val = searchParams.get(key);
+      if (val) params[key] = val;
+    });
+    if (Object.keys(params).length > 0) setUtmData(params);
+  }, [searchParams]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -31,6 +52,7 @@ export default function QuotePage() {
       projectType: (form.elements.namedItem("projectType") as HTMLSelectElement).value,
       description: (form.elements.namedItem("description") as HTMLTextAreaElement).value,
       delivery: (form.elements.namedItem("delivery") as HTMLInputElement).value,
+      ...utmData,
     };
     try {
       const res = await fetch("/api/quote", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });

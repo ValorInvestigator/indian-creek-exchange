@@ -228,6 +228,24 @@ export default function ProductsPage() {
     return () => observer.disconnect();
   }, []);
 
+  // Scroll to hash anchor on initial page load (for Google Ads deep links)
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    // Wait for hydration + DOM render
+    const timer = setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) {
+        window.scrollTo({
+          top: el.offsetTop - 120,
+          behavior: "smooth",
+        });
+        setActiveCategory(hash);
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Handle smooth scrolling to fix next/link behavior overriding the offset
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();

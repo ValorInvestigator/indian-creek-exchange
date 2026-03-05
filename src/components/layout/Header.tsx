@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
-import MagneticButton from "@/components/ui/MagneticButton";
+// MagneticButton removed -- moving CTA buttons hurt mobile tap accuracy
 
 const navigation = [
   { name: "Products", href: "/products" },
@@ -73,14 +73,12 @@ export default function Header() {
               {item.name}
             </Link>
           ))}
-          <MagneticButton>
-            <Link
-              href="/quote"
-              className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded font-[family-name:var(--font-heading)] text-sm font-bold tracking-wider uppercase transition-colors hover:shadow-lg hover:-translate-y-[1px] active:translate-y-0 ml-2"
-            >
-              Request a Quote
-            </Link>
-          </MagneticButton>
+          <Link
+            href="/quote"
+            className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded font-[family-name:var(--font-heading)] text-sm font-bold tracking-wider uppercase transition-colors hover:shadow-lg hover:-translate-y-[1px] active:translate-y-0 ml-2"
+          >
+            Request a Quote
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -134,15 +132,13 @@ export default function Header() {
                 transition={{ delay: navigation.length * 0.05 + 0.1 }}
                 className="pt-6 pb-20"
               >
-                <MagneticButton className="w-full">
-                  <Link
-                    href="/quote"
-                    className="block w-full bg-amber-500 hover:bg-amber-600 text-white text-center px-6 py-4 rounded font-[family-name:var(--font-heading)] text-lg font-bold tracking-wider uppercase shadow-md transition-colors"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    Request a Quote
-                  </Link>
-                </MagneticButton>
+                <Link
+                  href="/quote"
+                  className="block w-full bg-amber-500 hover:bg-amber-600 text-white text-center px-6 py-4 rounded font-[family-name:var(--font-heading)] text-lg font-bold tracking-wider uppercase shadow-md transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Request a Quote
+                </Link>
               </motion.div>
             </div>
           </motion.div>
