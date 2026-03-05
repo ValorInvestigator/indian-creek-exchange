@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Indian Creek Exchange",
+    title: "Privacy Policy",
     description: "Learn how Indian Creek Exchange handles and protects your data. Privacy policy for our cedar lumber yard in Elgin, Oregon.",
     alternates: { canonical: "/privacy" },
 };

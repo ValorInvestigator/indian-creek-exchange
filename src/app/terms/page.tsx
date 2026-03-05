@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Terms of Service | Indian Creek Exchange",
+    title: "Terms of Service",
     description: "Terms of service, sales conditions, and legal information for Indian Creek Exchange cedar lumber in Elgin, Oregon.",
     alternates: { canonical: "/terms" },
 };

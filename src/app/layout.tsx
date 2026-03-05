@@ -93,7 +93,7 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LumberStore",
+    "@type": "HardwareStore",
     name: "Indian Creek Exchange",
     description:
       "Cedar lumber yard in Elgin, Oregon. Fencing, decking, siding, beams, and cabin building supplies direct from the mill.",
@@ -124,6 +124,12 @@ export default function RootLayout({
         dayOfWeek: "Saturday",
         opens: "09:00",
         closes: "14:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: "00:00",
+        closes: "00:00",
       },
     ],
     image: `${siteUrl}/images/yard/aerial-yard.jpg`,
@@ -157,6 +163,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {GTM_ID && (
           <script
             dangerouslySetInnerHTML={{
@@ -180,10 +190,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             />
           </noscript>
         )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <Header />
         <main>{children}</main>
         <Footer />
