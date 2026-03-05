@@ -330,6 +330,27 @@ export default function ProductsPage() {
             className="py-16 md:py-24 border-b border-gray-200 last:border-b-0 scroll-mt-32"
           >
             <div className="max-w-7xl mx-auto px-4">
+              {/* Section banner — visible on all screen sizes */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="relative h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg mb-10 cursor-pointer group"
+                onClick={() => setSelectedImage(category.gallery[0])}
+              >
+                <Image
+                  src={category.gallery[0]}
+                  alt={`${category.name} — Indian Creek Exchange`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest-900/50 to-transparent" />
+                <div className="absolute bottom-4 left-6">
+                  <span className="text-white/80 text-xs font-semibold uppercase tracking-widest">Click to enlarge</span>
+                </div>
+              </motion.div>
+
               <div className="grid lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_400px] gap-10 lg:gap-16 items-start">
                 {/* Left column — product list */}
                 <motion.div
@@ -373,9 +394,9 @@ export default function ProductsPage() {
                   </motion.div>
                 </motion.div>
 
-                {/* Right column — sticky photo gallery */}
+                {/* Right column — sticky photo gallery (skip index 0, shown in banner above) */}
                 <div className="hidden lg:block sticky top-36 space-y-4">
-                  {category.gallery.map((src, i) => (
+                  {category.gallery.slice(1).map((src, i) => (
                     <motion.div
                       key={src}
                       layoutId={`gallery-image-${src}`}
