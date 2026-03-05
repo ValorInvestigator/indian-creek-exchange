@@ -71,21 +71,16 @@ export default function Footer() {
           <h4 className="font-[family-name:var(--font-heading)] text-sm font-bold tracking-wider uppercase mb-4 mt-8 text-amber-400">
             Service Areas
           </h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-forest-300 text-sm">
             {[
-              { name: "La Grande, OR", href: "/locations/la-grande" },
-              { name: "Elgin, OR", href: "/locations/elgin" },
-              { name: "Enterprise, OR", href: "/locations/enterprise" },
-              { name: "The Wallowas", href: "/locations/wallowas" },
+              "Elgin, OR",
+              "La Grande, OR",
+              "Enterprise, OR",
+              "The Wallowas",
+              "Tri-Cities, WA",
+              "Eastern Oregon & Beyond",
             ].map((loc) => (
-              <li key={loc.name}>
-                <Link
-                  href={loc.href}
-                  className="text-forest-300 hover:text-white text-sm transition-colors"
-                >
-                  Cedar Lumber in {loc.name}
-                </Link>
-              </li>
+              <li key={loc}>{loc}</li>
             ))}
           </ul>
         </div>
