@@ -64,7 +64,17 @@ export default function SpecialtyOrdersPage() {
     };
     try {
       const res = await fetch("/api/specialty", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
-      if (res.ok) { setSubmitted(true); } else { setError("Something went wrong. Call us at (541) 805-1190."); }
+      if (res.ok) {
+          // Fire Google Ads conversion event
+          if (typeof window !== 'undefined') {
+            (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'conversion', {
+              send_to: 'AW-17995024889/G9xiCI3Pm4McEPmT2YRD',
+              value: 1.0,
+              currency: 'USD',
+            });
+          }
+          setSubmitted(true);
+        } else { setError("Something went wrong. Call us at (541) 805-1190."); }
     } catch { setError("Something went wrong. Call us at (541) 805-1190."); }
     finally { setSending(false); }
   }
