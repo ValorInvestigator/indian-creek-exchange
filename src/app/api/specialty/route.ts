@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "Indian Creek Exchange <specialty@indian-creek-exchange.com>",
-      to: ["mike@unityforest.com", "jason@unityforest.com"],
+      to: ["mike@unityforest.com", "jason@unityforest.com", "ryan@unityforest.com"],
       replyTo: email || undefined,
       subject: `Specialty/Bulk Order — ${company || name} — ${projectType}`,
       html: `

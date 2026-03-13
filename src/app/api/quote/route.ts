@@ -69,7 +69,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "Indian Creek Exchange <quotes@indian-creek-exchange.com>",
-      to: ["kennonlumber@gmail.com", "mike@unityforest.com", "jason@unityforest.com"],
+      to: ["kennonlumber@gmail.com", "mike@unityforest.com", "jason@unityforest.com", "ryan@unityforest.com"],
       replyTo: (body.email && typeof body.email === "string" && body.email.trim()) ? body.email.trim() : undefined,
       subject: `Tyler's Quote Request: ${projectType} - ${name}`,
       html: `
